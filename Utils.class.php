@@ -1,12 +1,13 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * 工具类
+ * 提供一些常用的公共方法
  */
-
+ 
 class Utils {
-
+	
+    //匹配列表链接
     public static function match_links($document) {
 
         $match = array();
@@ -39,7 +40,8 @@ class Utils {
 
         return $match;
     }
-
+	
+    //下载远程图片	 
     public static function download_image($url, $save_dir = '', $filename = '', $type = 0) {
         if (trim($url) == '') {
             return 1;
@@ -84,7 +86,8 @@ class Utils {
 
         return 0;
     }
-
+    
+    //插入数据库
     public function insert_db($arrs) {
         $pdo = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
         foreach ($arrs as $arr) {
@@ -99,7 +102,8 @@ class Utils {
         }
         $pdo = null;
     }
-
+ 
+    //查询数据库
     function query_db() {
         $pdo = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', 'root');
         $rs = $pdo->query('SELECT * from article');
