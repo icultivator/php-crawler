@@ -18,4 +18,5 @@ $crawl->title_rule = 'div.page-header h1';
 $crawl->content_rule = 'div.post_content';
 //参数为1表示从列表批量采集，参数为2表示直接采集某一篇文章
 $crawl->crawl_article(1);
+
 ?>
