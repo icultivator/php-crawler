@@ -1,8 +1,7 @@
 <?php
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * 爬虫核心类
  */
 
 require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . 'phpQuery' . DIRECTORY_SEPARATOR . 'phpQuery.php';
